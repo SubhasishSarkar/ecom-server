@@ -1,0 +1,411 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ecom",
+		"_postman_id": "483cb6f3-596e-24f0-567b-847a3360aec9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"description": "",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"url": "localhost:5001/api/auth/signup",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"ss\",\n\t\"email\":\"a@gmail.com\",\n\t\"password\":\"123456\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "LogIn",
+					"request": {
+						"url": "localhost:5001/api/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"ss2\",\n\t\"password\": \"123456\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"url": "localhost:5001/api/user/61a280dc239cb244b75a9bee",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI4MGRjMjM5Y2IyNDRiNzVhOWJlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODA0MjEzNiwiZXhwIjoxNjM4MTI4NTM2fQ.ROy3_wSa74Xq0r4US8t58BAJX56WEfHwVTaboft6N20",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"sarkar1\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"url": "localhost:5001/api/user/61a280dc239cb244b75a9bee",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI4MGRjMjM5Y2IyNDRiNzVhOWJlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODA0MjEzNiwiZXhwIjoxNjM4MTI4NTM2fQ.ROy3_wSa74Xq0r4US8t58BAJX56WEfHwVTaboft6N20",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By ID",
+					"request": {
+						"url": "localhost:5001/api/user/find/61a28da4e233546bdb0c8515",
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI4ZGE0ZTIzMzU0NmJkYjBjODUxNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODA0MzA4MSwiZXhwIjoxNjM4MTI5NDgxfQ.cvTxJfCZ8Wc-BaHYjb5AIr4gS2dpKG-1O7LZpssMsC0",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"url": "localhost:5001/api/user",
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI4ZGE0ZTIzMzU0NmJkYjBjODUxNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODA0MzA4MSwiZXhwIjoxNjM4MTI5NDgxfQ.cvTxJfCZ8Wc-BaHYjb5AIr4gS2dpKG-1O7LZpssMsC0",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"url": "localhost:5001/api/product/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI4ZGE0ZTIzMzU0NmJkYjBjODUxNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODA0MzA4MSwiZXhwIjoxNjM4MTI5NDgxfQ.cvTxJfCZ8Wc-BaHYjb5AIr4gS2dpKG-1O7LZpssMsC0",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Bike\",\n\t\"desc\": \"Bike description\",\n\t\"img\": \"image\",\n\t\"price\": 10\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"url": "localhost:5001/api/product/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI4ZGE0ZTIzMzU0NmJkYjBjODUxNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODA0MzA4MSwiZXhwIjoxNjM4MTI5NDgxfQ.cvTxJfCZ8Wc-BaHYjb5AIr4gS2dpKG-1O7LZpssMsC0",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By ID",
+					"request": {
+						"url": "localhost:5001/api/product/61a292aadfe18054eb16658b",
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI4ZGE0ZTIzMzU0NmJkYjBjODUxNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzODA0MzA4MSwiZXhwIjoxNjM4MTI5NDgxfQ.cvTxJfCZ8Wc-BaHYjb5AIr4gS2dpKG-1O7LZpssMsC0",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Cart",
+					"request": {
+						"url": "localhost:5001/api/cart/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI5YjA3ZTlhODM0MzVjYjI1YmRmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzgwNDY0OTIsImV4cCI6MTYzODEzMjg5Mn0.Sng-kaSL2J9aoxvwpnUqAYAQDIvPTTGPrPnR0Mjx7_w",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"61a29b07e9a83435cb25bdf1\",\n\t\"products\": [\n\t\t{\n\t\t\t\"productId\":\"61a292aadfe18054eb16658b\",\n\t\t\t\"quantity\": 2\n\t\t}\n\t]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cart By User ID",
+					"request": {
+						"url": "localhost:5001/api/cart/61a29b07e9a83435cb25bdf1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI5YjA3ZTlhODM0MzVjYjI1YmRmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzgwNDY0OTIsImV4cCI6MTYzODEzMjg5Mn0.Sng-kaSL2J9aoxvwpnUqAYAQDIvPTTGPrPnR0Mjx7_w",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cart By User ID",
+					"request": {
+						"url": "localhost:5001/api/cart/61a29b07e9a83435cb25bdf1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI5YjA3ZTlhODM0MzVjYjI1YmRmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzgwNDY0OTIsImV4cCI6MTYzODEzMjg5Mn0.Sng-kaSL2J9aoxvwpnUqAYAQDIvPTTGPrPnR0Mjx7_w",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cart By User ID",
+					"request": {
+						"url": "localhost:5001/api/cart/61a29b07e9a83435cb25bdf1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI5YjA3ZTlhODM0MzVjYjI1YmRmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzgwNDY0OTIsImV4cCI6MTYzODEzMjg5Mn0.Sng-kaSL2J9aoxvwpnUqAYAQDIvPTTGPrPnR0Mjx7_w",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Oder By User Id",
+					"request": {
+						"url": "localhost:5001/api/order/61a29b07e9a83435cb25bdf1/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI5YjA3ZTlhODM0MzVjYjI1YmRmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzgwNDY0OTIsImV4cCI6MTYzODEzMjg5Mn0.Sng-kaSL2J9aoxvwpnUqAYAQDIvPTTGPrPnR0Mjx7_w",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"61a29b07e9a83435cb25bdf1\",\n\t\"products\": [\n\t\t{\n\t\t\t\"productId\":\"61a292aadfe18054eb16658b\",\n\t\t\t\"quantity\": 7\n\t\t}\n\t],\n\t\"amount\": 1000,\n\t\"address\":\"aaa\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Oders Of An User",
+					"request": {
+						"url": "localhost:5001/api/order/61a29b07e9a83435cb25bdf1/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI5YjA3ZTlhODM0MzVjYjI1YmRmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzgwNDY0OTIsImV4cCI6MTYzODEzMjg5Mn0.Sng-kaSL2J9aoxvwpnUqAYAQDIvPTTGPrPnR0Mjx7_w",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"61a29b07e9a83435cb25bdf1\",\n\t\"products\": [\n\t\t{\n\t\t\t\"productId\":\"61a292aadfe18054eb16658b\",\n\t\t\t\"quantity\": 7\n\t\t}\n\t],\n\t\"amount\": 1000,\n\t\"address\":\"aaa\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Oders By Order ID Of An User",
+					"request": {
+						"url": "localhost:5001/api/order/61a29b07e9a83435cb25bdf1/61a2a4ec00d5b78b75792f03",
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI5YjA3ZTlhODM0MzVjYjI1YmRmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzgwNDY0OTIsImV4cCI6MTYzODEzMjg5Mn0.Sng-kaSL2J9aoxvwpnUqAYAQDIvPTTGPrPnR0Mjx7_w",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"61a29b07e9a83435cb25bdf1\",\n\t\"products\": [\n\t\t{\n\t\t\t\"productId\":\"61a292aadfe18054eb16658b\",\n\t\t\t\"quantity\": 7\n\t\t}\n\t],\n\t\"amount\": 1000,\n\t\"address\":\"aaa\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order By Order ID Of An User",
+					"request": {
+						"url": "localhost:5001/api/order/61a29b07e9a83435cb25bdf1/61a2a4ec00d5b78b75792f03",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI5YjA3ZTlhODM0MzVjYjI1YmRmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzgwNDY0OTIsImV4cCI6MTYzODEzMjg5Mn0.Sng-kaSL2J9aoxvwpnUqAYAQDIvPTTGPrPnR0Mjx7_w",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"61a29b07e9a83435cb25bdf1\",\n\t\"products\": [\n\t\t{\n\t\t\t\"productId\":\"61a292aadfe18054eb16658b\",\n\t\t\t\"quantity\": 7\n\t\t}\n\t],\n\t\"amount\": 1000,\n\t\"address\":\"aaabb\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order By Order ID Of An User copy",
+					"request": {
+						"url": "localhost:5001/api/order/61a29b07e9a83435cb25bdf1/61a2a4ec00d5b78b75792f03",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYTI5YjA3ZTlhODM0MzVjYjI1YmRmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzgwNDY0OTIsImV4cCI6MTYzODEzMjg5Mn0.Sng-kaSL2J9aoxvwpnUqAYAQDIvPTTGPrPnR0Mjx7_w",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"61a29b07e9a83435cb25bdf1\",\n\t\"products\": [\n\t\t{\n\t\t\t\"productId\":\"61a292aadfe18054eb16658b\",\n\t\t\t\"quantity\": 7\n\t\t}\n\t],\n\t\"amount\": 1000,\n\t\"address\":\"aaabb\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
