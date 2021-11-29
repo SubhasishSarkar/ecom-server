@@ -5,6 +5,7 @@ const {
   verifyTokenAndAdmin,
 } = require("./verifyToken");
 const Order = require("../model/Order");
+const Cart = require("../model/Cart");
 
 //Get User Order By Order ID
 router.get("/:id/:orderId", verifyTokenAndAuthorization, async (req, res) => {
@@ -28,9 +29,19 @@ router.get("/:id", verifyTokenAndAuthorization, async (req, res) => {
 
 //Create
 router.post("/:id", verifyTokenAndAuthorization, async (req, res) => {
-  const newOrder = new Order(req.body);
+  const data = req.body;
+  const cart = await Cart.findById(data.cartId);
+  const order = {
+    userId: cart.userId,
+    products: cart.products,
+    amount: data.amount,
+    address: data.address,
+  };
+
+  const newOrder = new Order({ ...order });
   try {
     const savedOrder = await newOrder.save();
+    await Cart.findByIdAndDelete(data.cartId);
     res.status(200).json(savedOrder);
   } catch (err) {
     res.status(500).json(err);

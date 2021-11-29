@@ -34,7 +34,9 @@ router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
     const updatedCart = await Cart.findOneAndUpdate(
       { userId: req.params.id },
       {
-        $set: req.body,
+        $push: {
+          products: req.body,
+        },
       },
       { new: true }
     );
